@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char toLowerCAse(char ch)
+char toLowerCase(char ch)
 {
     if (ch >= 'a' && ch <= 'z')
     {
@@ -21,7 +21,7 @@ bool CheckPalindrome(char a[], int n)
 
     while (s <= e)
     {
-        if (a[s] != a[e])
+        if (toLowerCase(a[s]) != toLowerCase(a[e]))
         {
             return 0;
         }
@@ -58,6 +58,6 @@ int main()
 
     cout << "Palindrome or not: " << CheckPalindrome(name, len) << endl;
 
-    cout << "Chatacter is " << toLowerCAse('b') << endl;
-    cout << "Chatacter is " << toLowerCAse('C') << endl;
+    cout << "Character is " << toLowerCase('b') << endl;
+    cout << "Character is " << toLowerCase('C') << endl;
 }
