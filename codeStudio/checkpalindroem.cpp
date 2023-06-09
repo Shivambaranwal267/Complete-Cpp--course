@@ -14,13 +14,25 @@ char toLowerCase(char ch)
     }
 }
 
+int getLength(char name[])
+{
+
+    int count = 0;
+    for (int i = 0; name[i] != '\0'; i++)
+    {
+        count++;
+    }
+    return count;
+}
+
 bool CheckPalindrome(char a[], int n)
 {
     int s = 0;
     int e = n - 1;
 
     while (s <= e)
-    {
+    {   
+        // if (a[s] != a[e])
         if (toLowerCase(a[s]) != toLowerCase(a[e]))
         {
             return 0;
@@ -32,17 +44,6 @@ bool CheckPalindrome(char a[], int n)
         }
     }
     return 1;
-}
-
-int getLength(char name[])
-{
-
-    int count = 0;
-    for (int i = 0; name[i] != '\0'; i++)
-    {
-        count++;
-    }
-    return count;
 }
 
 int main()
