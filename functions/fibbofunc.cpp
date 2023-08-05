@@ -8,11 +8,12 @@ int fibbo(int n)
     for (int i = 0; i <= n; i++)
     {
         int nextnumber = a + b;
-        couat << nextnumber << " ";
+        cout << nextnumber << " ";
         a = b;
         b = nextnumber;
     }
 }
+
 int main()
 {
     int n;
