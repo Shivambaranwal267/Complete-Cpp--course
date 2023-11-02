@@ -13,8 +13,8 @@ void bubblesort(int arr[], int size)
                 swap(arr[j], arr[j + 1]);
                 swapped = true;
             }
-            if(swapped == false)
-            break;
+            if (swapped == false)
+                break;
         }
     }
 }
@@ -30,9 +30,11 @@ int printArray(int arr[], int size)
 int main()
 {
     int arr[6] = {4, 3, 5, 9, 7, 11};
+    bubblesort(arr, 6);
+    printArray(arr, 6);
 
-    bubblesort(arr,6);
-    printArray(arr,6);
+    cout << endl;
+    
 
     return 0;
 }
